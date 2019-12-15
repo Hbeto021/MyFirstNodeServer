@@ -14,5 +14,5 @@ contact with Node.js
   
    localhost:3000/welcome  (You will be directed to the welcome page)
    
-   localhost:3000/anyword (Any different word typed after #localhost:3000/ will direct you to unavailable page)
+   localhost:3000/anyword (Any different word typed after 'localhost:3000/' will direct you to unavailable page)
    
