@@ -10,14 +10,14 @@ let server = httpServer.createServer(function (request, response) {
 });
 
 //set a port where the server will run on
-server.listen(8080, function () {
+server.listen(3000, function () {
     //function callBack, called when the server is running
     console.log("The server is running..")
 });
 
 function directResponse(urlRequest) {
     if(urlRequest === "/"){
-        return "<h1>Home Page!</h1>";
+        return "<h1>Home page!</h1>";
     } else if (urlRequest === "/welcome"){
         return "<h1>Welcome!</h1>";
     } else {
