@@ -1,0 +1,26 @@
+//get native http module
+let httpServer = require('http');
+
+//build the server with callBack function in params
+let server = httpServer.createServer(function (request, response) {
+    //function callBack, called when the EventLoop verify that server received a request than triggers an event
+    response.writeHead(200, {"Content-Type":"text/html"});
+    response.write(directResponse(request.url));
+    response.end();
+});
+
+//set a port where the server will run on
+server.listen(8080, function () {
+    //function callBack, called when the server is running
+    console.log("The server is running..")
+});
+
+function directResponse(urlRequest) {
+    if(urlRequest === "/"){
+        return "<h1>Home Page!</h1>";
+    } else if (urlRequest === "/welcome"){
+        return "<h1>Welcome!</h1>";
+    } else {
+        return "<h1>Page unavailable!</h1>";
+    }
+}
